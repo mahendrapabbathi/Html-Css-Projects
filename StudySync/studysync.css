@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.logo h1{
+    font-weight: bold;
+}
+
+
+
+.navi ul{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width:768px) {
+    .navi ul{
+        display: flex;
+    }
+}
+
+.navi ul li{
+    list-style-type: none;
+    margin:0px 10px;
+}
+
+.navi ul li a{
+    text-decoration: none;
+    color:grey;
+    font-weight: 500;
+}
+
+.contact{
+    display:  none;
+}
+.contact a{
+    text-decoration: none;
+    color:white;
+    background-color: rgb(97, 97, 243);
+    padding:7px;
+    border-radius: 7px;
+    display: flex;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .contact{
+        display: block;
+    }
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button img{
+    height:20px;
+    width:20px;
+    display: block;
+}
+
+@media screen and (min-width:768px) {
+    .menu-button img{
+        display: none;
+    }
+}
+
+/* Main page */
+
+.main-page{
+    display: flex;
+    gap:8rem;
+    width:80%;
+    margin:auto;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.left-page{
+    width: 400px;
+    animation:leftpage 1s ease forwards;
+}
+
+@keyframes leftpage {
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.left-page .introduce{
+    color:blue;
+    margin:5px 0px;
+}
+
+.left-page span{
+    font-size: 3rem;
+    font-weight: bold;
+    margin:5px 0px;
+}
+
+.left-page .content{
+    margin:20px 0px;
+    color:grey;
+    font-weight: 400;
+}
+
+.left-page .main-buttons{
+    margin-top: 5px;
+}
+
+.main-buttons .start{
+    margin-right: 10px;
+    background-color: rgb(97, 97, 243);
+    border: none;
+    outline:none;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+
+.main-buttons .start a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-buttons .tour{
+    margin-right: 10px;
+    background-color: rgba(36, 29, 29, 0.979);
+    border: none;
+    outline:none;
+    padding: 7px 10px;
+    border-radius: 2px;
+}
+
+.main-buttons .tour a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right-page img{
+    width:400px;
+    height:400px;
+    border-radius: 20px;
+    margin:50px 0px;
+   
+}
+
+@media screen and (max-width:1000px) {
+    .right-page img{
+        width:75%;
+        /* height: 100%; */
+    }
+
+    .main-page{
+        padding:50px 0px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .right-page img{
+        display: none;
+    }
+
+    .left-page{
+        width:98%;
+    }
+
+    .main-page{
+        padding:100px 0px;
+    }
+}
+
+@media screen and (max-width:500px) {
+   
+    .left-page{
+        width:100%;
+    }
+}
+
+.template{
+    background-color: white;
+}
+
+.complete-card{
+    width:80%;
+    margin:0 auto;
+
+}
+
+.complete-card h2{
+    text-align: center;
+    padding: 1rem;
+}
+
+.main-card{
+    gap:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin:0px 5px;
+    border: 1px solid #777;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card .image{
+    border-radius: 50%;
+    margin:10px auto;
+}
+
+.card .text{
+    padding:1.2rem;
+}
+
+.card img{
+    width:100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .heading{
+    color:blue;
+    text-align: center;
+}
+
+.card .desc{
+    color:#777;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    border:1px solid blue;
+    box-shadow: 0px 4px 5px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width:800px) {
+    .main-card{
+            display: grid;
+            grid-template-columns: repeat(200px 1fr);
+    }
+}

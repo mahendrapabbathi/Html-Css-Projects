@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* height:100vh;
+    width:100vw; */
+    overflow-x: none;
+}
+
+.navContainer{
+    background-image: linear-gradient(60deg,rgb(54, 99, 223),purple);
+    width:100vw;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    width:100%;
+    padding:10px;
+}
+#navlist{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 30px;
+}
+
+#main-text{
+    font-size: 35px;
+    color:#fff;
+    text-shadow: 1px 1px 5px #fff;
+}
+
+a{
+    text-decoration: none;
+    padding:30px;
+    font-size: 19px;
+    color:rgb(10, 220, 248);
+}
+
+.contentBox{
+    width:70%;
+    margin:auto;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+    
+}
+
+.item{
+    display:flex;
+    justify-content: space-around ;
+    align-items: center;
+}
+
+.item .leftBox{
+    display: flex; 
+    flex-direction: column;
+    gap:20px;
+}
+
+h2{
+    margin-bottom: 3px;
+}
+
+.main-head{
+    font-size:30px;
+    color:#18b2bd;
+    text-shadow: 1px 1px 2px #18b2bd;
+    margin-top: 10px;
+}
+
+.rightBox{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.rightBox {
+    height:220px;
+    width: 220px;
+    transition:all 0.3s linear;
+}
+
+.rightBox:hover{
+    transform: scale(1.1);
+}
+
+ol,ul{
+    margin-bottom: 15px;
+}
+
+.rightBox .text{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(99, 96, 96,0.7);
+    opacity: 0;
+    transition:all 0.3s linear;
+    box-shadow: 1px 1px 3px black;
+}
+
+.rightBox:hover .text{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.rightBox .text span{
+    color:#fff;
+}
+
+.footerBox{
+    background-image: linear-gradient(60deg,rgb(54, 99, 223),purple);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:10px;
+}
+
+.footerBox p{
+    color:#fff;
+    font-size: 19px;
+}
